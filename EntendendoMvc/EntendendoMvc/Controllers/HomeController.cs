@@ -21,13 +21,20 @@ namespace EntendendoMvc.Controllers
         //public IActionResult Index(int id, string categoria)
         public IActionResult Index(int p1, string p2)
         {
-            return View();
+            Filme f = new Filme();
+            f.Genero = "M";
+            return RedirectToAction("Privacy", f);
+            //return View();
         }
 
         [Route("pvy")]
         [Route("privacidade")]
-        public IActionResult Privacy()
+        public IActionResult Privacy(Filme f)
         {
+            if (ModelState.IsValid)
+            {
+
+            }
             //return View();
             return Content("conteúdo");
         }
