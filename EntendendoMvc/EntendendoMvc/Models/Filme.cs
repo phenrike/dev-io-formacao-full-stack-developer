@@ -12,8 +12,10 @@ namespace EntendendoMvc.Models
         public string Titulo { get; set; }
         public DateTime DataLancamento { get; set; }
         public string Genero { get; set; }
+        [Range(1, 1000, ErrorMessage = "Valor de 1 a 1000")]
         public decimal Valor { get; set; }
 
+        [RegularExpression(@"^[0-5]*$",ErrorMessage = "Somente números de 1 a 5" )]
         public int Avaliacao { get; set; }
     }
 }

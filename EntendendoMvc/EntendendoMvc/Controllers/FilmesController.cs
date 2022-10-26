@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EntendendoMvc.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EntendendoMvc.Controllers
 {
@@ -8,6 +9,16 @@ namespace EntendendoMvc.Controllers
         public IActionResult Adicionar()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Adicionar(Filme filme)
+        {
+            if (ModelState.IsValid)
+            {
+                // TODO: Gravar no banco de dados
+            }
+            return View(filme);
         }
     }
 }
