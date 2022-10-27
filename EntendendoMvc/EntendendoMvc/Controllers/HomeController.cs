@@ -21,10 +21,10 @@ namespace EntendendoMvc.Controllers
         //public IActionResult Index(int id, string categoria)
         public IActionResult Index(int p1, string p2)
         {
-            Filme f = new Filme();
-            f.Genero = "M";
-            return RedirectToAction("Privacy", f);
-            //return View();
+            //Filme f = new Filme();
+            //f.Genero = "M";
+            //return RedirectToAction("Privacy", f);
+            return View();
         }
 
         [Route("pvy")]
@@ -35,8 +35,8 @@ namespace EntendendoMvc.Controllers
             {
 
             }
-            //return View();
-            return Content("conteúdo");
+            return View();
+            //return Content("conteúdo");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
